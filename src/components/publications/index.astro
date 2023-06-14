@@ -1,0 +1,64 @@
+---
+import PageTitle from "../custom/PageTitle.astro";
+import Card from "./Card.astro";
+---
+
+<section id="publications" class="publications-container">
+  <PageTitle title="Publications" />
+  <div class="publications">
+    <Card
+      href="https://ieeexplore.ieee.org/document/9937319"
+      desc="Enabling Low-Power Approximations Through Unified Power Format"
+      imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/post.png"
+      title="AxLEAP"
+      year="ISCAS 2022"
+    />
+    <Card
+      href="https://ieeexplore.ieee.org/document/9937437"
+      desc="Approximate Rounding and Truncation Based MAC Unit for Fault-Tolerant Applications"
+      imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/notes.png"
+      title="ART-MAC"
+      year="ISCAS 2022"
+    />
+    <Card
+      href="https://ieeexplore.ieee.org/document/9806249"
+      desc="An Efficient Carry Speculative Approximate Adder with Rectification"
+      imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/notebook.png"
+      title="EFCSA"
+      year="ISCAS 2022"
+    />
+    <Card
+      href="https://ieeexplore.ieee.org/document/9806220"
+      desc="An 8-bit High-Performance Approximate Multiplier Design for Error Resilient Applications"
+      imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/notes.png"
+      title="HPAM"
+      year="ISCAS 2022"
+    />
+    <Card
+      href="https://ieeexplore.ieee.org/document/9401266"
+      desc="A Segmentation based Approximate Multiplier for Error Tolerant Applications"
+      imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/notes2.png"
+      title="SAM"
+      year="ISCAS 2021"
+    />
+  </div>
+</section>
+
+<style>
+  .publications-container {
+    margin-top: 7rem;
+  }
+
+  .publications {
+    margin-block: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+
+  @media (min-width: 48em) {
+    .publications-container {
+      margin-top: 8%;
+    }
+  }
+</style>

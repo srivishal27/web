@@ -1,0 +1,36 @@
+---
+import PageTitle from "../custom/PageTitle.astro";
+import EduCard from "../custom/EduCard.astro";
+---
+
+<section id="education" class="education-container">
+  <PageTitle title="Education" />
+  <EduCard
+    lightTxt="2015 - 2019"
+    imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/graduate.png"
+    alt="graduate"
+    title="National Institute of Technology, Rourkela"
+    subtitle="Bachelors of Technology, Electronics and Communication Engineering."
+    smallTxt=""
+  />
+  <EduCard
+    lightTxt="2012 - 2014"
+    imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/graduate.png"
+    alt="HSC"
+    title="Kendriya Vidyalaya, Puri"
+    subtitle="Higher Secondary Education and Senior Secondary Education"
+    smallTxt=""
+  />
+</section>
+
+<style>
+  .education-container {
+    margin-top: 6rem;
+  }
+
+  @media (min-width: 48em) {
+    .education-container {
+      margin-top: 6%;
+    }
+  }
+</style>

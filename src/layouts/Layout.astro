@@ -1,0 +1,102 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Electronics and Communication Engineer turned Applications Wizard fueled by a passion for uniting theory and practice."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="https://sambeetpanda507.github.io/sagar-portfolio/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="canonical" href="/" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <footer>
+      <small>
+        <span>&copy; All Rights Reserved</span>
+        <span
+          ><img src="https://sambeetpanda507.github.io/sagar-portfolio/assets/gmail.png" alt="gmail" height="15" width="15" loading="lazy" /> sagarsatapathy.satapathy1@gmail.com</span
+        >
+      </small>
+    </footer>
+  </body>
+  <style is:global>
+    :root {
+      --accent: 124, 58, 237;
+      --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --secondary: #ff7e33;
+      --blue-light: #22d3ee;
+      --white: #fafafae0;
+    }
+    *,
+    *::after,
+    *::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ul,
+    ol {
+      list-style-type: none;
+    }
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
+    html {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--primary);
+      color: var(--white);
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+    }
+    body {
+      max-width: 1000px;
+      margin-inline: auto;
+      font-size: 1.6rem;
+      padding-inline: 4%;
+    }
+    footer {
+      padding-block: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      margin-top: 10%;
+    }
+    footer small {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    footer small span:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    @media (min-width: 64em) {
+      body {
+        padding-inline: 0;
+      }
+    }
+  </style>
+</html>

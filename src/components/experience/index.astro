@@ -1,0 +1,27 @@
+---
+import EduCard from "../custom/EduCard.astro";
+import PageTitle from "../custom/PageTitle.astro";
+---
+
+<section id="experience" class="experience-container">
+  <PageTitle title="Work Experience" />
+  <EduCard
+    imgSrc="https://sambeetpanda507.github.io/sagar-portfolio/assets/engineer.png"
+    alt="engineer"
+    title="Applications Engineer"
+    subtitle="Synopsys, India"
+    smallTxt="Presently working in Digital Design Group of the company with the HLD (High Level Design) team supporting front-end tools for Synthesis, Power and Timing Analysis. I have helped Qualcomm (India and SanDiego teams) in successfully taping out multiple 5/7nm designs over the last 2 years by providing support in Synthesis and Sign-off cycles."
+    lightTxt="June 2019 - Present"
+  />
+</section>
+
+<style>
+  .experience-container {
+    margin-top: 7rem;
+  }
+  @media (min-width: 48em) {
+    .experience-container {
+      margin-top: 8%;
+    }
+  }
+</style>

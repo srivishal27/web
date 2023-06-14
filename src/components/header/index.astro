@@ -1,0 +1,66 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<header>
+  <!-- brand logo -->
+  <div class="brand-container">
+    <a href="https://sambeetpanda507.github.io/sagar-portfolio/"><span>Sagar</span>&nbsp;<span>Satapathy</span></a><span class="red-dot"></span>
+  </div>
+  <ul class="nav-links">
+    <NavLink name="education" path="#education" />
+    <NavLink name="experience" path="#experience" />
+    <NavLink name="publications" path="#publications" />
+  </ul>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    padding-block: 1.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .brand-container {
+    font-size: 2.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .red-dot {
+    display: inline-block;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: rgb(255, 0, 0);
+    margin-left: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .brand-container span:last-child {
+    color: var(--secondary);
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 37.5em) {
+    header {
+      justify-content: space-between;
+    }
+    .nav-links {
+      margin-top: 0;
+    }
+    .nav-links {
+      justify-content: space-between;
+    }
+  }
+</style>

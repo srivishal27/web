@@ -1,0 +1,31 @@
+---
+export interface Props {
+  path: string;
+  imgSrc: string;
+  alt: string;
+}
+
+const { alt, imgSrc, path } = Astro.props;
+---
+
+<a href={path} target="_blank" rel="noreferrer" class="icon">
+  <img src={imgSrc} alt={alt} height="50" width="50" loading="lazy" />
+</a>
+
+<style>
+  .icon {
+    height: 3.7rem;
+    width: 3.7rem;
+    transition: transform 150ms linear;
+  }
+
+  .icon:hover {
+    transform: translateY(0.4rem);
+  }
+
+  .icon > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+</style>
